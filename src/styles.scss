@@ -1,1 +1,192 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default */
+  --jobify-default: #d4d4d8;
+  --jobify-default-50: #fafafa;
+  --jobify-default-100: #f4f4f5;
+  --jobify-default-200: #e4e4e7;
+  --jobify-default-300: #d4d4d8;
+  --jobify-default-400: #a1a1aa;
+  --jobify-default-500: #71717a;
+  --jobify-default-600: #52525b;
+  --jobify-default-700: #3f3f46;
+  --jobify-default-800: #27272a;
+  --jobify-default-900: #18181b;
+
+  /* Primary */
+  --jobify-primary: #006fee;
+  --jobify-primary-50: #e6f1fe;
+  --jobify-primary-100: #cce3fd;
+  --jobify-primary-200: #99c7fb;
+  --jobify-primary-300: #66aaf9;
+  --jobify-primary-400: #338ef7;
+  --jobify-primary-500: #006fee;
+  --jobify-primary-600: #005bc4;
+  --jobify-primary-700: #004493;
+  --jobify-primary-800: #002e62;
+  --jobify-primary-900: #001731;
+
+  /* Secondary */
+  --jobify-secondary: #7828c8;
+  --jobify-secondary-50: #f2eafa;
+  --jobify-secondary-100: #e4d4f4;
+  --jobify-secondary-200: #c9a9e9;
+  --jobify-secondary-300: #ae7ede;
+  --jobify-secondary-400: #9353d3;
+  --jobify-secondary-500: #7828c8;
+  --jobify-secondary-600: #6020a0;
+  --jobify-secondary-700: #481878;
+  --jobify-secondary-800: #301050;
+  --jobify-secondary-900: #180828;
+
+  /* Success */
+  --jobify-success: #17c964;
+  --jobify-success-50: #e8faf0;
+  --jobify-success-100: #d1f4e0;
+  --jobify-success-200: #a2e9c1;
+  --jobify-success-300: #74dfa2;
+  --jobify-success-400: #45d483;
+  --jobify-success-500: #17c964;
+  --jobify-success-600: #12a150;
+  --jobify-success-700: #0e793c;
+  --jobify-success-800: #095028;
+  --jobify-success-900: #052814;
+
+  /* Warning */
+  --jobify-warning: #f5a524;
+  --jobify-warning-50: #fefce8;
+  --jobify-warning-100: #fdedd3;
+  --jobify-warning-200: #fbdba7;
+  --jobify-warning-300: #f9c97c;
+  --jobify-warning-400: #f7b750;
+  --jobify-warning-500: #f5a524;
+  --jobify-warning-600: #c4841d;
+  --jobify-warning-700: #936316;
+  --jobify-warning-800: #62420e;
+  --jobify-warning-900: #312107;
+
+  /* Danger */
+  --jobify-danger: #f31260;
+  --jobify-danger-50: #fee7ef;
+  --jobify-danger-100: #fdd0df;
+  --jobify-danger-200: #faa0bf;
+  --jobify-danger-300: #f871a0;
+  --jobify-danger-400: #f54180;
+  --jobify-danger-500: #f31260;
+  --jobify-danger-600: #c20e4d;
+  --jobify-danger-700: #920b3a;
+  --jobify-danger-800: #610726;
+  --jobify-danger-900: #310413;
+
+  /* Layout */
+  --jobify-background: #ffffff;
+  --jobify-foreground: #11181c;
+  --jobify-divider: #11111126;
+
+  /* Content */
+  --jobify-content-1: #ffffff;
+  --jobify-content-2: #f4f4f5;
+  --jobify-content-3: #e4e4e7;
+  --jobify-content-4: #d4d4d8;
+}
+
+/* Define dark theme jobifys */
+[data-theme="dark"] {
+  /* Default */
+  --jobify-default: #3f3f46;
+  --jobify-default-900: #fafafa;
+  --jobify-default-800: #f4f4f5;
+  --jobify-default-700: #e4e4e7;
+  --jobify-default-600: #d4d4d8;
+  --jobify-default-500: #a1a1aa;
+  --jobify-default-400: #71717a;
+  --jobify-default-300: #52525b;
+  --jobify-default-200: #3f3f46;
+  --jobify-default-100: #27272a;
+  --jobify-default-50: #18181b;
+
+  /* Primary */
+  --jobify-primary: #006fee;
+  --jobify-primary-900: #e6f1fe;
+  --jobify-primary-800: #cce3fd;
+  --jobify-primary-700: #99c7fb;
+  --jobify-primary-600: #66aaf9;
+  --jobify-primary-500: #338ef7;
+  --jobify-primary-400: #006fee;
+  --jobify-primary-300: #005bc4;
+  --jobify-primary-200: #004493;
+  --jobify-primary-100: #002e62;
+  --jobify-primary-50: #001731;
+
+  /* Secondary */
+  --jobify-secondary: #9353d3;
+  --jobify-secondary-900: #f2eafa;
+  --jobify-secondary-800: #e4d4f4;
+  --jobify-secondary-700: #c9a9e9;
+  --jobify-secondary-600: #ae7ede;
+  --jobify-secondary-500: #9353d3;
+  --jobify-secondary-400: #7828c8;
+  --jobify-secondary-300: #6020a0;
+  --jobify-secondary-200: #481878;
+  --jobify-secondary-100: #301050;
+  --jobify-secondary-50: #180828;
+
+  /* Success */
+  --jobify-success: #17c964;
+  --jobify-success-900: #e8faf0;
+  --jobify-success-800: #d1f4e0;
+  --jobify-success-700: #a2e9c1;
+  --jobify-success-600: #74dfa2;
+  --jobify-success-500: #45d483;
+  --jobify-success-400: #17c964;
+  --jobify-success-300: #12a150;
+  --jobify-success-200: #0e793c;
+  --jobify-success-100: #095028;
+  --jobify-success-50: #052814;
+
+  /* Warning */
+  --jobify-warning: #f5a524;
+  --jobify-warning-900: #fefce8;
+  --jobify-warning-800: #fdedd3;
+  --jobify-warning-700: #fbdba7;
+  --jobify-warning-600: #f9c97c;
+  --jobify-warning-500: #f7b750;
+  --jobify-warning-400: #f5a524;
+  --jobify-warning-300: #c4841d;
+  --jobify-warning-200: #936316;
+  --jobify-warning-100: #62420e;
+  --jobify-warning-50: #312107;
+
+  /* Danger */
+  --jobify-danger: #f31260;
+  --jobify-danger-900: #fee7ef;
+  --jobify-danger-800: #fdd0df;
+  --jobify-danger-700: #faa0bf;
+  --jobify-danger-600: #f871a0;
+  --jobify-danger-500: #f54180;
+  --jobify-danger-400: #f31260;
+  --jobify-danger-300: #c20e4d;
+  --jobify-danger-200: #920b3a;
+  --jobify-danger-100: #610726;
+  --jobify-danger-50: #310413;
+
+  /* Layout */
+  --jobify-background: #000000;
+  --jobify-foreground: #ecedee;
+  --jobify-divider: #ffffff26;
+
+  /* Content */
+  --jobify-content-1: #18181b;
+  --jobify-content-2: #27272a;
+  --jobify-content-3: #3f3f46;
+  --jobify-content-4: #52525b;
+}
+
+
+body{
+  background-color: var(--jobify-background);
+  color: var(--jobify-foreground);
+}
