@@ -1,0 +1,58 @@
+<div
+  class="w-full h-auto bg-jobify-default-50 grid grid-cols-1 gap-0"
+  [ngClass]="[getRadiusClasses(), getSizeClasses()]"
+>
+  <!-- Label -->
+  <label
+    *ngIf="label"
+    [for]="name"
+    class="text-jobify-default-400 font-bold text-xs"
+  >
+    {{ label }}
+  </label>
+
+  <div class="w-full h-auto flex justify-center items-center gap-1">
+    <!-- Start Icon using Material Icons -->
+    <i *ngIf="startIcon" class="material-icons min-w-5 h-5">{{ startIcon }}</i>
+
+    <!-- Input Field -->
+    <input
+      [id]="name"
+      [name]="name"
+      [type]="inputType"
+      [value]="value"
+      [placeholder]="placeholder"
+      (input)="handleInputChange($event)"
+      [disabled]="disabled"
+      [required]="required"
+      [class.border-red-500]="formControl.invalid && formControl.touched"
+      class="bg-transparent outline-none border-none flex-1 rounded placeholder:text-jobify-default-200 placeholder:text-sm placeholder:font-bold"
+	  autocomplete="off"
+    />
+
+    <!-- Password toggle icon using Material Icons -->
+    <i
+      *ngIf="type === 'password'"
+      (click)="togglePasswordVisibility()"
+      class="material-icons cursor-pointer"
+      aria-label="Toggle password visibility"
+    >
+      {{ isPasswordVisible ? "visibility_off" : "visibility" }}
+    </i>
+
+    <!-- End Icon using Material Icons -->
+    <i
+      *ngIf="endIcon && type !== 'password'"
+      class="material-icons min-w-5 h-5"
+      >{{ endIcon }}</i
+    >
+  </div>
+
+  <!-- Error Message -->
+  <div
+    *ngIf="formControl.invalid && formControl.touched && getErrorMessage()"
+    class="text-jobify-danger-500 text-xs"
+  >
+    {{ getErrorMessage() }}
+  </div>
+</div>
