@@ -1,0 +1,41 @@
+<!-- Modal container, shown when isOpen is true -->
+<div
+  *ngIf="isOpen"
+  class="fixed inset-0 flex justify-center z-50"
+  [ngClass]="{
+    'items-start': placement === 'top',
+    'items-center': placement === 'center',
+    'items-end': placement === 'bottom'
+  }"
+>
+  <!-- Backdrop, clicking it will close the modal -->
+  <div
+    class="absolute inset-0"
+    [ngClass]="{
+      'bg-black bg-opacity-50': backdrop === 'opaque',
+      'bg-transparent': backdrop === 'transparent',
+      'backdrop-blur-sm': backdrop === 'blur'
+    }"
+    (click)="handleClose()"
+  ></div>
+
+  <!-- Modal content with dynamic size, radius, shadow, and scroll behavior -->
+  <div
+    [class]="getModalClasses() + ' relative bg-jobify-content-1 p-5 space-y-4'"
+  >
+    <!-- Modal header -->
+    <div>
+      <ng-content select="[modal-header]"></ng-content>
+    </div>
+
+    <!-- Modal body -->
+    <div>
+      <ng-content select="[modal-body]"></ng-content>
+    </div>
+
+    <!-- Modal footer -->
+    <div>
+      <ng-content select="[modal-footer]"></ng-content>
+    </div>
+  </div>
+</div>
