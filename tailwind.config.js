@@ -27,7 +27,7 @@ module.exports = {
             200: "var(--jobify-primary-200)",
             300: "var(--jobify-primary-300)",
             400: "var(--jobify-primary-400)",
-            500: "rgb(var(--jobify-primary-500)/<alpha-value>)",
+            500: "var(--jobify-primary-500)",
             600: "var(--jobify-primary-600)",
             700: "var(--jobify-primary-700)",
             800: "var(--jobify-primary-800)",
