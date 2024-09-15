@@ -1,0 +1,20 @@
+<button
+  [ngClass]="getButtonClasses()"
+  [attr.disabled]="disabled ? true : null"
+  [attr.type]="type"
+  class="transition-all duration-300 focus:outline-none"
+  (click)="onClick($event)"
+>
+  <!-- Start icon (Material Icon) -->
+  <i *ngIf="startContent && !endContent" class="material-icons mr-2">
+    {{ startContent }}
+  </i>
+
+  <!-- Button label content -->
+  <ng-content></ng-content>
+
+  <!-- End icon (Material Icon) -->
+  <i *ngIf="endContent && !startContent" class="material-icons ml-2">
+    {{ endContent }}
+  </i>
+</button>
